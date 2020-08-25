@@ -1,0 +1,4 @@
+my_django_proj/static/
+my_django_proj/__pycache__/
+my_django_proj/myapp/__pycache__/
+my_django_proj/db.sqlite3
