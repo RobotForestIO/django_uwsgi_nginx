@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  web:
+    build: my_django_proj
+    ports:
+      - "8001:8001"
+  nginx:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - web
+    entrypoint: "./wait-for-it/wait-for-it.sh web:8001 -- sh start_nginx.sh"
