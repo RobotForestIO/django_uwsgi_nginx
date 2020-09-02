@@ -1,3 +1,4 @@
+# Run configtest to make sure Nginx configuration is ok
 service nginx configtest && \
-# service nginx stop && \
+# Run nginx in the foreground
 nginx -g "daemon off;"
